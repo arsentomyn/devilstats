@@ -1,0 +1,211 @@
+@media (max-width: 1000px) {
+    body {
+        padding : 0 20px ;
+    }
+    .header {
+        padding: 25 0px;
+		&_body {}
+		&_logo {}
+		&_img {}
+		&_name {
+            margin: 7px 0 0 5px;
+        }
+		&_nav {}
+		&__account {}
+		&__login {}
+		&__start {} 
+        .nav-links {
+            display: none;
+        }
+        .burger {
+        }
+        .line1 {
+            height: 4px;
+            width: 30px;
+            background: #000;
+            border-radius: 5px;
+        }
+        .line2 {
+            height: 4px;
+            width: 30px;
+            background: #000;
+            border-radius: 5px;
+            margin: 7px 0;
+        }
+        .line3 {
+            height: 4px;
+            width: 30px;
+            background: #000;
+            border-radius: 5px;
+        }
+    }
+    .selector__tracker {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 0 0;
+		&__input {
+            display: flex;
+            align-items: center;
+            max-width: auto;
+            border: 1px solid #000;
+            padding: 9px 10px;
+            & img {
+                max-height: 17px;
+            }
+            & input {
+                width: 90%;
+                margin: 0 0 0 20px;
+            }
+        }
+        &__button {
+            max-width: auto;
+            margin: 10px 0 0 0;
+            & button {
+                width: 100%;
+                padding: 9px 0 11px;
+                background: #F5F4FC;
+                color: #797888;
+            }
+        }
+        &__button button , &__input {
+            border-radius: 5px;
+        }
+    }
+    .stores {
+        // margin: 20px 0 0 0;
+		&__buttons {
+            margin: 20px 0;
+            display: flex;
+            & button {
+                padding: 10px 0;
+                border-radius: 5px;
+            }
+            .jq1 , .jq2 {
+                padding: 2px 10px;
+                border-radius: 5px;
+            }
+            .jq1 {
+                background: #fff;
+                color: #bc2019;
+            }
+            .jq2 {
+                background: #fff;
+                color: #bc2019;
+            }
+        }
+		&__button1 {
+            width: 50%;
+            background: #bc2019;
+            color: #fff;
+        }
+		&__button2 {
+            width: 50%;
+            background: #fff;
+            border: 2px solid #FBF9FC;
+        }
+
+		&__body {
+            padding: 20px;
+            border: 1px solid #FBF9FC;
+            border-radius: 5px;
+        }
+		&__titile {
+            margin: 0 0 10px 0;
+        }
+		&__container {}
+		&__store {
+            margin: 0 0 15px;
+			&_body {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &_img {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30%;
+                padding: 15px 2px;
+                background: #F3F7FF;
+                & img {
+                    max-height: 30px;
+                    max-width: 100%;
+                }
+            }
+			&_logo {
+                display: flex;
+                flex-direction: column;
+                margin: 0 0 0 10px;
+                & span {
+                    font-size: 15px;
+                    margin: 0 15px 3px 0;
+                }
+                & a {
+                    font-size: 11px;
+                    color: blue;
+                }
+            }
+			&_buttons {
+                .hg , .hd {
+
+                }
+                .hg {
+                    background: #fff;
+                    border: 2px solid #FBF9FC;
+                }
+                .hd {
+                    background: #bc2019;
+                    padding: 10px 5px 0 15;
+                }
+                & button {
+                    padding: 10px 5px 10px 7px;
+                    border-radius: 5px ;
+                }
+                & button img {
+                    max-height: 20px;
+                }
+            }
+		}
+    }
+}
+
+body {
+    background: #fff;
+    font-family: "Barlow", sans-serif;
+}
+.wrapper {
+    max-width: 1216px;
+    margin: 0 auto;
+}
+.header {
+    padding: 20px 0px;
+    &_body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_logo {
+        display: flex;
+        align-items: center;
+    }
+    &_img {
+        & img {
+            max-width : 40px;
+        }
+    }
+    &_name {
+        font-family: "Freeman", sans-serif;
+        font-size: 25px;
+        font-style: bold;
+    }
+    &_nav {
+        & nav ul {
+            display: flex;
+        }
+    }
+    &__account {
+        display: flex;
+    }
+	&__login {}
+	&__start {}
+}
