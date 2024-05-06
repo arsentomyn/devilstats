@@ -47,10 +47,10 @@
             display: flex;
             align-items: center;
             max-width: auto;
-            border: 1px solid #000;
+            border: 1px solid #bc2019;
             padding: 9px 10px;
             & img {
-                max-height: 17px;
+                max-height: 20px;
             }
             & input {
                 width: 90%;
@@ -87,10 +87,12 @@
             .jq1 {
                 background: #fff;
                 color: #bc2019;
+                margin: 0 0 0 5px;
             }
             .jq2 {
-                background: #fff;
+                background: #fcf3f2;
                 color: #bc2019;
+                margin: 0 0 0 5px;
             }
         }
 		&__button1 {
@@ -111,6 +113,8 @@
         }
 		&__titile {
             margin: 0 0 10px 0;
+            font-weight: 600;
+            color: #7C7C85;
         }
 		&__container {}
 		&__store {
@@ -120,12 +124,16 @@
                 align-items: center;
                 justify-content: space-between;
             }
+            &_body-container {
+                display: flex;
+                align-items: center;
+            }
             &_img {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 30%;
-                max-height: 50px;
+                width: 70px;
+                height: 60px;
                 padding: 15px 2px;
                 background: #F3F7FF;
                 & img {
@@ -137,10 +145,11 @@
 			&_logo {
                 display: flex;
                 flex-direction: column;
-                margin: 0 0 0 10px;
+                margin: 0 0 0 20px;
                 & span {
                     font-size: 15px;
-                    margin: 0 15px 3px 0;
+                    margin: 0 15px 5px 0;
+                    font-weight: 500;
                 }
                 & a {
                     font-size: 11px;
@@ -148,23 +157,35 @@
                 }
             }
 			&_buttons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 55px;
+                border-left: 1px solid #ECEFF8;
+                padding: 0 0 0 15px;
                 .hg , .hd {
-
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    // flex-direction: row;
                 }
                 .hg {
                     background: #fff;
-                    border: 2px solid #FBF9FC;
+                    border: 2px solid #e9e9e9;
                 }
                 .hd {
                     background: #bc2019;
                     padding: 10px 5px 0 15;
+                    margin: 0 0 0 5px;
                 }
                 & button {
-                    padding: 10px 5px 10px 7px;
+                    // padding: 10px 5px 10px 7px;
                     border-radius: 5px ;
+                    height: 35px;
+                    width: 35px;
                 }
                 & button img {
-                    max-height: 20px;
+                    max-height: 15px;
                 }
             }
 		}
