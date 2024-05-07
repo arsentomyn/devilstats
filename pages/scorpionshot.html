@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <!-- <canvas></canvas> -->
     <div class="wrapper">
         <header class="header">
             <div class="header_body">
@@ -123,7 +124,9 @@
                     </div>
                     <h2>$5,873.87</h2>
                 </div>
-                <div class="deep-data__analytics"></div>
+                <div class="deep-data__analytics">
+                    <canvas></canvas>
+                </div>
                 <div class="deep-data__report">
                     <h3>Total Sales</h3>
                     <div class="deep-data__view-report">
@@ -135,5 +138,98 @@
             </div>
         </section>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script >
+        let canvas = window.document.querySelector('canvas');
+        let context = canvas.getContext('2d');
+        let dataStore = [
+            {
+                "value": 178.78 ,
+                "data": "Apr 04" ,
+            },
+            {
+                "value": 248.78 ,
+                "data": "Apr 05" ,
+            },
+            {
+                "value": 1998.78 ,
+                "data": "Apr 06" ,
+            },
+            {
+                "value": 352.78 ,
+                "data": "Apr 07" ,
+            },
+            {
+                "value": 874.78 ,
+                "data": "Apr 08" ,
+            },
+            {
+                "value": 1293.78 ,
+                "data": "Apr 09" ,
+            },
+            {
+                "value": 178.78 ,
+                "data": "Apr 04" ,
+            },
+            {
+                "value": 2748.78 ,
+                "data": "Apr 05" ,
+            },
+            {
+                "value": 10998.78 ,
+                "data": "Apr 06" ,
+            },
+            {
+                "value": 3052.78 ,
+                "data": "Apr 07" ,
+            },
+            {
+                "value": 4874.78 ,
+                "data": "Apr 08" ,
+            },
+            {
+                "value": 1293.78 ,
+                "data": "Apr 09" ,
+            },
+        ];
+        const create = (xData,yData) => {
+            let dataSet = {
+                labels:xData,
+                datasets:[{
+                    data:yData,
+                    pointStyle:false,
+                }],
+            };
+            let config = {
+                type:'line',
+                data:dataSet,
+                options : {
+                    scales:{
+                        x:{
+                            grid:{
+                                color:'#fff',
+                            },
+                        },
+                    },
+                    plugins:{
+                        legend:{
+                            display:false,
+                        },
+                    },
+                },
+            };
+            let chart = new Chart(context,config);
+            console.log('hi')
+        };
+        let xData = [ ];
+        let yData = [ ];
+        for(let i = 0 ; i < dataStore.length ; i++ ) {
+            xData.push(dataStore[i].data)
+            yData.push(dataStore[i].value)
+        }
+        create(xData,yData)
+    </script>
 </body>
 </html>
