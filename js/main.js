@@ -3,6 +3,8 @@ let context = canvas.getContext('2d');
 let revenue = document.getElementById('revenue');
 let sales = document.getElementById('sales');
 let dataTime = document.getElementById('dataTime');
+
+
 let mainData = {
     start: 'Apr 12',
     end: 'May 11',

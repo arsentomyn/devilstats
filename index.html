@@ -74,7 +74,7 @@
                 <div class="stores__buttons">
                     <button class="stores__button1">
                         <span>Stores</span>
-                        <span class="jq1">3/50</span>
+                        <span id="storesCounter" class="jq1">2/50</span>
                     </button>
                     <button class="stores__button2">
                         <span>Products</span>
@@ -86,16 +86,15 @@
                         <span>Store</span>
                     </div>
                     <div class="stores__container">
-                        <!--  normal-store -->
-                        <div class="stores__store">
+                        <div class="stores__store normal-store">
                             <div class="stores__store_body">
                                 <div class="stores__store_body-container">
                                     <div class="stores__store_img">
                                         <img style="height: 80%;" src="./img/logos/not-found.png" alt="">
                                     </div>
-                                    <div class="stores__store_logo">
-                                        <span>Dumbbellbraceletin</span>
-                                        <a href="">dumbbellbraceletin.com</a>
+                                    <div  class="stores__store_logo">
+                                        <span style="font-size: 12px;">Dumbbellbraceletin</span>
+                                        <a style="font-size: 9px;" href="">dumbbellbraceletin.com</a>
                                     </div>
                                 </div>
                                 <div class="stores__store_buttons">
@@ -166,56 +165,7 @@
         </footer>
     </div>
 
-    <script>
-        var inputText = document.getElementById('userInput');
-        var button = document.getElementById('colorButton');
-        var close = document.getElementById('close');
-        var notification = document.getElementById('notification');
-        var loader = document.getElementById('loader');
-        var store = document.querySelector('.normal-store')
-        console.log(store.classList)
 
-        function changeButtonColor() {
-            // Перевірка, чи порожній введений текст
-            if (inputText.value.trim() === '') {
-                // console.log(inputText)
-                button.classList.remove('button-input-active');
-                button.classList.add('button-input-normal');
-            } else {
-                button.classList.remove('button-input-normal');
-                button.classList.add('button-input-active');
-                // console.log(inputText)
-            }
-            // console.log('1')
-        }  
-        function showNotification() {
-            if ( button.classList.contains('button-input-active') ) {
-                loader.classList.add('active')
-                setTimeout(function() {
-                    loader.classList.remove('active');
-                }, 200);
-                setTimeout(function() {
-                    notification.classList.add('active'); // Додаємо клас "active"
-                }, 300);
-                setTimeout(function() {
-                    store.classList.remove('normal-store'); // Додаємо клас "active"
-                    store.classList.add('active-store')
-                }, 210);
-                // console.log()
-            }
-        };
-        function closeNotification() {
-            notification.classList.remove('active'); // Видаляємо клас "active"
-        };
-
-        button.addEventListener('click', () => {
-            showNotification(); // Показати повідомлення при натисканні на кнопку
-            console.log(';')
-        });
-        close.addEventListener('click', () => {
-            closeNotification(); // Закрити повідомлення при натисканні на кнопку "x"
-            console.log(':')
-        }); 
-    </script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
