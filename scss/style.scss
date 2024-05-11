@@ -372,6 +372,10 @@
             background: rgba(188,33,25,.0588235294);
             border-radius: 5px;
             padding: 20px 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
             & img {
                 width: 100%;
             }
@@ -460,14 +464,18 @@
 
         &__revenue {
             margin: 0 0 20px;
-            padding: 15px 25px;
+            padding: 15px 10px;
             border: 2px solid #FBF9FC;
             border-radius: 5px;
             & h2 {
                 font-size: 27px;
+                // padding: 0 15px;
                 font-weight: 500;
+
+                padding:0 0 20px;
             }
             & h3 {
+                // padding: 0 15px;
                 font-size: 17px;
                 font-weight: 500;
             }
@@ -488,10 +496,11 @@
         &__analytics {
             // /////////////////
             // height: 300px;
-            margin: 0 0 20px;
-            padding: 5px 10px;
-            border: 2px solid #FBF9FC;
-            border-radius: 5px;
+            padding: 25px 0 0px;
+            // padding: 5px 10px;
+            border-top: 2px solid #FBF9FC;
+            // border-radius: 5px;
+
         }
         &__report {
             margin: 0 0 20px;
